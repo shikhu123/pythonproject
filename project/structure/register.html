@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta charset="UTF-8">
+      <title>Eployement Registeration Form</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <script src="script/script.js" type="text/javascript"></script>
+   </head>
+   <body>
+      <div id = "header">
+         <img src = "images/img.jpg" alt = "header image text" />
+      </div>
+         <form  onload="return checkform(this);" onsubmit="myfunction();">
+            <table>
+			<h2>Employee Details</h2>
+               <tr>
+                  <td><label for="fname">Employee Name:</label></td>
+                  <td><input type="text" id="fname" name="fname" value="" placeholder="Firstname" required>&nbsp; <input type="text" id="lname" name="lname" value="" placeholder="Lastname" required></td>
+               </tr>
+               <tr>
+                  <td><label for="email">Email:</label></td>
+                  <td><input type="email" id="email" name="email" value="" placeholder="abc@abc.com" required></td>
+               </tr>
+               <tr>
+                  <td><label for="contact">Contact Number:</label></td>
+                  <td><input type="tel" id="number" name="number" value="" placeholder="Contact Number" required></td>
+               </tr>
+			   <tr>
+				<td>Address:</td>
+				<td><input type="text" id="add" name="add" value="" placeholder="Street address" required>  <input type="text" id="add2" name="add2" value="" placeholder="Address line 2" ></td>
+			   </tr>
+			   	<tr>
+				<td></td>
+				<td><input type="text" id="add" name="add" value="" placeholder="Apt/Unit number" >  <input type="text" id="add" name="add" value="" placeholder="State/City" required></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td><input type="text" id="add" name="add" value="" placeholder="postal code" required></td>
+				</tr>
+                <tr>
+                  <td>  <label for="birthday">Birthday:</label></td>
+                  <td><input type="date" id="birthday" name="birthday"></td>
+               </tr>
+                <tr>
+                  <td>  <label for="dob">Date of Birth:</label></td>
+                  <td><input type="date" id="dob" name="dob"></td>
+               </tr>
+               <tr>
+                  <td><label for="designation">Choose a Job type:</label></td>
+                  <td>
+                     <select name="job" id="job">
+                         <option value="type">select the job type</option>
+                         <option value="web">HR</option>
+                         <option value="sw">Software Engineer</option>
+                         <option value="db">Database Administrator</option>
+                         <option value="qa">QA Analyst</option>
+                         <option value="qa">Bussiness Executive</option>
+                         <option value="qa">Accountant</option>
+                         <option value="qa">Chatered Accountant</option>
+                         <option value="qa">Chatered Accountant</option>
+                         <option value="qa">Receptionist</option>
+                     </select>
+                  </td>
+               </tr>
+
+               <tr>
+                  <td><label for="skills">Skill Set:</label></td>
+                  <td><label class="container">
+                     <input type="checkbox">Python</input>
+                     </label>
+                      <label class="container">
+                     <input type="checkbox">Mongodb</input>
+                     </label>
+                      <label class="container">
+                     <input type="checkbox">HTML</input>
+                     </label>
+                     <label class="container">
+                     <input type="checkbox">CSS</input>
+                     </label>
+                     <label class="container">
+                     <input type="checkbox">Java</input>
+                     </label>
+                     <label class="container">
+                     <input type="checkbox">Javascript</input>
+                     </label>
+                     <label class="container">
+                     <input type="checkbox"></input>
+                     </label>
+                     <label class="container">
+                     <input type="checkbox">Jquery</input>
+                     </label>
+                  </td>
+               </tr>
+               <tr>
+                  <td><label for="myfile">Select a file:</label></td>
+                  <td><input type="file" id="myfile" name="myfile" required></td>
+               </tr>
+               <tr>
+                  <td><label for="sex">Please select your gender:</label></td>
+                  <td><input type="radio" id="male" name="gender" value="male">
+                     <label for="male">Male</label>
+                     <input type="radio" id="male" name="gender" value="female">
+                     <label for="male">Female</label>
+                     <input type="radio" id="male" name="gender" value="other">
+                     <label for="male">Other</label>
+                  </td>
+               </tr>
+               <tr>
+                  <td><label for="yourself">Tell us about yourself:</label></td>
+                  <td><textarea rows="4" cols="50" name="comment" required>
+
+                     </textarea>
+                  </td>
+               </tr>
+                <tr>
+                  <td>  <label for="salary">Expected Salary:</label></td>
+                  <td><input type="text" id="add" name="add" value="" placeholder="Apt/Unit number"></td>
+               </tr>
+
+			   </table>
+
+
+				<table>
+				<h2>References</h2>
+               <tr>
+                  <td><label for="fname">Full Name:</label></td>
+                  <td><input type="text" id="fname" name="fname" value="" placeholder="Firstname" required>&nbsp; <input type="text" id="lname" name="lname" value="" placeholder="Lastname" required></td>
+               </tr>
+               <tr>
+                  <td><label for="email">Email:</label></td>
+                  <td><input type="email" id="email" name="email" value="" placeholder="abc@abc.com" required></td>
+               </tr>
+               <tr>
+                  <td><label for="contact">Contact Number:</label></td>
+                  <td><input type="tel" id="number" name="number" value="" placeholder="Contact Number" required></td>
+               </tr>
+
+			   <tr>
+                  <td>
+                     <div class="capbox">
+                        <div id="CaptchaDiv"></div>
+                        <div class="capbox-inner">
+                           Type the number:<br>
+                           <input type="hidden" id="txtCaptcha">
+                           <input type="text" name="CaptchaInput" id="CaptchaInput" size="15" required><br>
+                        </div>
+                     </div>
+                  </td>
+               </tr>
+			   </table>
+			   <p><input type="checkbox" id = "tc" required> </input> I acknowledge that the information I have provided is correct and I am authorizing to use my information for further application process </p>
+
+               <input id = "button" type="submit" value="Submit" >
+         </form>
+      </div>
+   </body>
+</html>
